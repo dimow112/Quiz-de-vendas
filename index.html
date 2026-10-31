@@ -7,6 +7,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%239ae8ab'/%3E%3Cpath d='M9 23 23 9M9 9h14v14' fill='none' stroke='%23091622' stroke-width='2'/%3E%3C/svg%3E">
   <title>Desafio de afiliados · Divulgue e Venda</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="quiz-content.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -22,6 +23,7 @@
         <h2>Você está pronto para divulgar?</h2>
         <p>Coloque em prática o que faz uma boa divulgação do e-book <strong>“Divulgue e Venda”</strong>. Cada resposta é uma oportunidade de aprender.</p>
         <div class="stats"><div><strong>08</strong><span>situações práticas</span></div><div><strong>80<span class="unit"> pts</span></strong><span>para conquistar</span></div><div><strong>∞</strong><span>no seu ritmo</span></div></div>
+        <p class="privacy-note">Ao começar, registramos uma participação anônima, suas respostas, pontuação, data e horário para acompanhar e melhorar o treinamento. Não pedimos nome, telefone ou e-mail.</p>
         <button id="start" class="primary">Começar desafio <span aria-hidden="true">→</span></button>
         <div class="card-note"><span aria-hidden="true">✓</span> Sem cadastro <span class="note-divider">·</span> Sem cronômetro <span class="note-divider">·</span> Aprendizado de verdade</div>
       </div>
@@ -35,6 +37,7 @@
       <p class="pace-note">Sem pressa. O importante é entender cada escolha.</p>
     </section>
     <section id="result" class="result hidden" aria-labelledby="result-title"></section>
+    <div class="save-notice"><p id="save-status" role="status"></p><button id="retry-save" class="hidden" type="button">Tentar salvar novamente</button></div>
   </main>
   <footer><span>DIVULGUE E VENDA · APRENDER PARA FAZER MELHOR</span><p>A pontuação representa apenas seu desempenho no treinamento.<br>Sem prêmios em dinheiro ou promessa de vendas. Nenhum dado pessoal é solicitado.</p></footer>
 </body>

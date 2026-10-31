@@ -14,3 +14,4 @@
 .result .secondary:hover{background:#9ae8ab12}
 .purchase small,.contact small{display:block;color:var(--muted);font-size:11px;line-height:1.6;text-align:center;margin-top:12px}
 @media(max-width:600px){.purchase,.contact{padding:20px 16px}.purchase h2,.contact h2{font-size:20px}.result a.primary{font-size:12px;padding:14px 10px;overflow-wrap:anywhere}}
+.privacy-note{color:var(--muted);font-size:11px;line-height:1.7;margin:0 0 18px}.save-notice{max-width:650px;margin:20px auto;text-align:center;font-size:12px;color:var(--muted)}#retry-save{background:transparent;border:1px solid var(--green);border-radius:7px;padding:8px 12px;color:var(--green)}

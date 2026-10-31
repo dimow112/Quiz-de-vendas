@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Administração · Divulgue e Venda</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="admin.css"><script src="quiz-content.js" defer></script><script src="admin.js" defer></script></head>
+<body>
+<header class="header"><a class="brand" href="/">divulgue & venda.</a><span class="header-label">ADMINISTRAÇÃO</span></header>
+<main>
+<h1>Painel do <span>quiz.</span></h1>
+<p id="message" role="status"></p>
+<section id="login-panel" class="question-card">
+<h2>Acesso do administrador</h2>
+<form id="login-form"><label for="email">E-mail do administrador</label><input id="email" type="email" autocomplete="username" required maxlength="254"><label for="password">Senha</label><input id="password" type="password" autocomplete="current-password" required maxlength="512"><button class="primary" id="login-button">Entrar</button></form>
+<p>Somente a conta autorizada pode consultar as participações.</p>
+</section>
+<section id="dashboard" class="hidden" aria-label="Participações">
+<div class="admin-actions"><button id="refresh">Atualizar</button><button id="logout">Sair</button></div>
+<div class="stats admin-stats"><div><strong id="started">0</strong><span>participações iniciadas</span></div><div><strong id="completed">0</strong><span>participações finalizadas</span></div></div>
+<p>Uma participação corresponde a uma tentativa do quiz, não a uma pessoa única. “Jogar novamente” inicia outra tentativa. Horários de Brasília (America/Sao_Paulo). Pontuações parciais incluem apenas respostas salvas.</p>
+<div id="records"></div>
+<nav class="admin-actions" aria-label="Paginação"><button id="previous">Anterior</button><span id="page-number"></span><button id="next-page">Próxima</button></nav>
+</section>
+</main>
+</body></html>
