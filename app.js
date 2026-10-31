@@ -82,7 +82,35 @@ function answer(index) {
 }
 function finish() {
   showScreen('result');
-  $('result').innerHTML = `<div class="eyebrow">DESAFIO CONCLUÍDO</div><h1 id="result-title" tabindex="-1">Mais conhecimento.<br>Mais confiança para divulgar.</h1><div class="result-card"><span class="tag">SEU DESEMPENHO NO TREINAMENTO</span><div class="result-score">${score}<span> / 80 pontos</span></div><p>Você acertou ${score / 10} de 8 perguntas. Cada passo conta para uma divulgação mais consciente.</p><div class="review"><h2>${mistakes.length ? 'O que vale revisar' : 'Você acertou todas!'}</h2><div id="review-content"></div></div><div class="mission"><span class="tag">SUA PRÓXIMA MISSÃO</span><h2>Agora é hora de praticar.</h2><p>Escreva uma divulgação explicando o que é o e-book, para quem serve, o que inclui e o preço de R$ 17,90.</p><small>Confira o conteúdo real do e-book antes de escrever. Pratique onde preferir, sem enviar dados pessoais.</small></div><button id="restart" class="primary">Jogar novamente <span aria-hidden="true">↻</span></button></div>`;
+  const whatsappMessage = 'Olá! Fiz seu quiz de vendas e gostaria de saber mais sobre o e-book.';
+  const whatsappUrl = `https://wa.me/5511912046002?text=${encodeURIComponent(whatsappMessage)}`;
+  $('result').innerHTML = `
+    <div class="eyebrow">DESAFIO CONCLUÍDO</div>
+    <h1 id="result-title" tabindex="-1">Gostou desse quiz? <span>Você também pode aprender a criar o seu!</span></h1>
+    <p class="result-intro">Descubra como usar estratégias digitais para divulgar produtos, atrair clientes e desenvolver seu negócio na internet.</p>
+    <div class="result-card">
+      <span class="tag">SEU DESEMPENHO NO TREINAMENTO</span>
+      <div class="result-score">${score}<span> / 80 pontos</span></div>
+      <p>Você acertou ${score / 10} de 8 perguntas. Cada passo conta para uma divulgação mais consciente.</p>
+      <div class="review"><h2>${mistakes.length ? 'O que vale revisar' : 'Você acertou todas!'}</h2><div id="review-content"></div></div>
+      <section class="purchase" aria-labelledby="purchase-title">
+        <span class="tag">E-BOOK DIVULGUE E VENDA</span>
+        <h2 id="purchase-title">Quer começar a aprender sobre vendas digitais?</h2>
+        <p>Conheça o e-book <strong>“Divulgue e Venda”</strong>, para quem quer aprender sobre divulgação de produtos e vendas nas redes sociais.</p>
+        <p class="product-scope">A proposta do e-book apresentado aqui é o aprendizado sobre divulgação e vendas nas redes sociais. A criação de quizzes não é apresentada como conteúdo incluído.</p>
+        <p class="price"><span>Preço</span> R$ 17,90</p>
+        <a id="purchase-link" class="primary" href="https://pay.kiwify.com.br/jKQrTqC" target="_blank" rel="noopener noreferrer">💚 QUERO GARANTIR MEU E-BOOK</a>
+        <small>Checkout Kiwify · abre em uma nova aba.</small>
+      </section>
+      <section class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Quer saber mais? Entre em contato!</h2>
+        <p>Tem alguma dúvida sobre o e-book ou quer saber mais sobre o quiz? Fale comigo pelo WhatsApp!</p>
+        <a id="whatsapp-link" class="primary secondary" href="${whatsappUrl}" target="_blank" rel="noopener noreferrer">💬 TIRAR DÚVIDAS NO WHATSAPP</a>
+        <small>Abre o WhatsApp em uma nova aba com uma mensagem pronta para você enviar.</small>
+      </section>
+      <div class="mission"><span class="tag">SUA PRÓXIMA MISSÃO</span><h2>Agora é hora de praticar.</h2><p>Escreva uma divulgação explicando o que é o e-book, para quem serve, o que inclui e o preço de R$ 17,90.</p><small>Confira o conteúdo real do e-book antes de escrever. Pratique onde preferir, sem enviar dados pessoais.</small></div>
+      <button id="restart" class="primary">Jogar novamente <span aria-hidden="true">↻</span></button>
+    </div>`;
   if (mistakes.length) {
     const list = document.createElement('ul');
     mistakes.forEach(q => {
